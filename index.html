@@ -64,9 +64,9 @@
       "address": { "@type": "PostalAddress", "addressCountry": "IE" },
       "description": "Website design, redesigns, maintenance, and a simple owner analytics dashboard for small businesses.",
       "makesOffer": [
-        { "@type": "Offer", "name": "Starter Build", "price": "1490", "priceCurrency": "EUR", "description": "Simple, professional website for small businesses." },
-        { "@type": "Offer", "name": "Professional Build", "price": "3490", "priceCurrency": "EUR", "description": "Full website redesign or new build with analytics dashboard." },
-        { "@type": "Offer", "name": "Managed Plan", "price": "149", "priceCurrency": "EUR", "description": "Monthly website maintenance, performance, and reporting." }
+        { "@type": "Offer", "name": "Starter Build", "price": "900", "priceCurrency": "EUR", "description": "Simple, professional website for small businesses. Monthly payment plan available." },
+        { "@type": "Offer", "name": "Professional Build", "price": "1200", "priceCurrency": "EUR", "description": "Full website redesign or new build with analytics dashboard. Monthly payment plan available." },
+        { "@type": "Offer", "name": "Managed Plan", "price": "145", "priceCurrency": "EUR", "description": "Monthly subscription: website management, analytics dashboard, and ongoing updates." }
       ]
     },
     {
@@ -467,6 +467,11 @@ section{padding:90px 0;position:relative}
 .plan .price{font-family:"Space Grotesk";font-weight:700}
 .plan .price .num{font-size:2.4rem;color:#fff}
 .plan .price .per{color:var(--dim);font-size:.95rem;font-family:"Inter"}
+.plan .pay-note{
+  font-size:.82rem;color:var(--brand-2);font-style:italic;margin-top:-8px;
+  padding:6px 10px;border-radius:8px;background:rgba(212,175,55,.06);
+  border:1px solid rgba(212,175,55,.18);display:inline-block;
+}
 .plan .desc{color:var(--muted);font-size:.95rem}
 .plan ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
 .plan li{display:flex;gap:10px;color:#cfd6ff;font-size:.93rem}
@@ -1424,7 +1429,8 @@ body{animation:page-in .6s ease-out both}
       <div class="plan reveal">
         <h3>Starter Build</h3>
         <p class="desc">For small businesses that need a simple, professional website.</p>
-        <div class="price"><span class="num">€1,490</span><span class="per"> · one-time</span></div>
+        <div class="price"><span class="num">€900</span><span class="per"> · one-time</span></div>
+        <div class="pay-note">or pay monthly — flexible payment plan available</div>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>1–3 pages, mobile-friendly</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Contact form &amp; basic SEO</li>
@@ -1438,7 +1444,8 @@ body{animation:page-in .6s ease-out both}
         <span class="badge">Most popular</span>
         <h3>Professional Build</h3>
         <p class="desc">For businesses that need a full website redesign or build from scratch.</p>
-        <div class="price"><span class="num">€3,490</span><span class="per"> · one-time</span></div>
+        <div class="price"><span class="num">€1,200</span><span class="per"> · one-time</span></div>
+        <div class="pay-note">or pay monthly — flexible payment plan available</div>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>5–8 pages, custom design</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Service pages &amp; lead capture</li>
@@ -1453,12 +1460,14 @@ body{animation:page-in .6s ease-out both}
 
       <div class="plan reveal" style="transition-delay:.1s">
         <h3>Managed Plan</h3>
-        <p class="desc">For owners who want continued support after launch.</p>
-        <div class="price"><span class="num">€149</span><span class="per"> /month</span></div>
+        <p class="desc">Ongoing management, analytics &amp; updates — handled for you.</p>
+        <div class="price"><span class="num">€145</span><span class="per"> /month</span></div>
+        <div class="pay-note">subscription · cancel anytime</div>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Maintenance &amp; updates</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Website management &amp; updates</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Analytics dashboard access</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Performance &amp; uptime checks</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Monthly analytics report</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Monthly performance report</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Priority fixes &amp; support</li>
         </ul>
         <a href="#onboarding" class="btn btn-ghost">Get managed support</a>

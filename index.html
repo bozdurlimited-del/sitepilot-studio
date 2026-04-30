@@ -76,7 +76,7 @@
         { "@type": "Question", "name": "Can you build a website from scratch?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We design custom websites for new businesses, startups, and owners who want a professional online presence from day one — including hosting, domains, and launch support." } },
         { "@type": "Question", "name": "Do you offer monthly maintenance?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our Managed plan covers updates, fixes, security checks, performance monitoring, and a monthly owner report." } },
         { "@type": "Question", "name": "What is included in the analytics dashboard?", "acceptedAnswer": { "@type": "Answer", "text": "Traffic, leads, top pages, conversion rate, device and location insights, page speed, uptime, maintenance status, and a plain-English monthly summary." } },
-        { "@type": "Question", "name": "How long does a website project take?", "acceptedAnswer": { "@type": "Answer", "text": "Typical timelines: Starter Build 1–2 weeks, Professional Build 3–5 weeks. We confirm a clear timeline after reviewing your onboarding form." } },
+        { "@type": "Question", "name": "How long does a website project take?", "acceptedAnswer": { "@type": "Answer", "text": "Typical timelines: Starter Build 1–2 weeks, Professional Build 3–5 weeks. We confirm a clear timeline after reviewing your application form." } },
         { "@type": "Question", "name": "Do I need to know anything technical?", "acceptedAnswer": { "@type": "Answer", "text": "Not at all. We handle hosting, domains, SSL, code, and analytics setup. You get a clean dashboard and clear monthly reports." } }
       ]
     }
@@ -1269,7 +1269,7 @@ body{animation:page-in .6s ease-out both}
       <p>Four clear steps from first conversation to a launched, monitored website.</p>
     </div>
     <div class="process">
-      <div class="step reveal"><div class="num"><span>01</span></div><h3>Tell us about your business</h3><p>Fill out a short onboarding form with your business details, goals, and website needs.</p></div>
+      <div class="step reveal"><div class="num"><span>01</span></div><h3>Tell us about your business</h3><p>Fill out a short application form with your business details, goals, and website needs.</p></div>
       <div class="step reveal" style="transition-delay:.05s"><div class="num"><span>02</span></div><h3>We review your project</h3><p>We look at your current website, target audience, brand, and priorities — and recommend a scope.</p></div>
       <div class="step reveal" style="transition-delay:.1s"><div class="num"><span>03</span></div><h3>We build or redesign</h3><p>We create a modern website focused on design, usability, performance, and conversion.</p></div>
       <div class="step reveal" style="transition-delay:.15s"><div class="num"><span>04</span></div><h3>Launch, maintain, track</h3><p>After launch we keep your site running smoothly and give you a live owner dashboard.</p></div>
@@ -1422,7 +1422,7 @@ body{animation:page-in .6s ease-out both}
     <div class="section-head reveal">
       <span class="eyebrow">Pricing</span>
       <h2>Choose your <span class="gradient-text">package</span></h2>
-      <p>Transparent packages that scale with your business. Not sure which fits? Start the onboarding form and we'll recommend.</p>
+      <p>Transparent packages that scale with your business. Not sure which fits? Start the application form and we'll recommend.</p>
     </div>
     <div class="pricing">
 
@@ -1474,27 +1474,27 @@ body{animation:page-in .6s ease-out both}
       </div>
 
     </div>
-    <p class="muted" style="text-align:center;margin-top:24px;font-size:.92rem">Not sure which package fits? Start the onboarding form and we'll recommend the right option.</p>
+    <p class="muted" style="text-align:center;margin-top:24px;font-size:.92rem">Not sure which package fits? Start the application form and we'll recommend the right option.</p>
   </div>
 </section>
 
-<!-- ============== ONBOARDING FORM ============== -->
+<!-- ============== APPLICATION FORM ============== -->
 <section id="onboarding">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Onboarding</span>
-      <h2>Start your <span class="gradient-text">website project</span></h2>
-      <p>Tell us about your business, your goals, and what kind of website you need. We'll use this to plan your project properly.</p>
+      <span class="eyebrow">Apply to work with us</span>
+      <h2>Start your <span class="gradient-text">application</span></h2>
+      <p>We review every application personally and respond within one business day with feedback and a proposal. Six short steps.</p>
     </div>
 
-    <!-- ONBOARDING FORM: replace YOUR_FORM_ID with your Formspree form ID after signing up at formspree.io -->
+    <!-- APPLICATION FORM: replace YOUR_FORM_ID with your Formspree form ID after signing up at formspree.io -->
     <form class="form-wrap reveal" id="onboardForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
       <div class="steps" id="steps">
         <span class="pill active"></span><span class="pill"></span><span class="pill"></span><span class="pill"></span><span class="pill"></span><span class="pill"></span>
       </div>
-      <div class="step-meta"><span id="stepLabel">Step 1 of 6 — Business details</span><span id="stepCount">17%</span></div>
+      <div class="step-meta"><span id="stepLabel">Step 1 of 6 — About you</span><span id="stepCount">17%</span></div>
 
-      <!-- STEP 1 -->
+      <!-- STEP 1 — About you -->
       <div class="step-panel show" data-step="1">
         <div class="row-2">
           <div class="field"><label for="fullName">Full name</label><input id="fullName" name="fullName" type="text" required placeholder="Jane Doe" /></div>
@@ -1508,24 +1508,47 @@ body{animation:page-in .6s ease-out both}
           <div class="field"><label for="location">Business location</label><input id="location" name="location" type="text" placeholder="Dublin, Ireland" /></div>
           <div class="field"><label for="industry">Industry</label><input id="industry" name="industry" type="text" placeholder="Trades, coaching, retail …" /></div>
         </div>
-        <div class="field"><label for="currentSite">Current website URL <span class="dim">(if you have one)</span></label><input id="currentSite" name="currentSite" type="url" placeholder="https://" /></div>
+        <div class="field"><label for="businessSummary">What does your business do? <span class="dim">(1–2 sentences)</span></label><textarea id="businessSummary" name="businessSummary" required placeholder="We install and service residential heating systems across Connacht."></textarea></div>
+        <div class="field"><label for="currentSite">Current website URL <span class="dim">(if any)</span></label><input id="currentSite" name="currentSite" type="url" placeholder="https://" /></div>
       </div>
 
-      <!-- STEP 2 -->
+      <!-- STEP 2 — Project basics -->
       <div class="step-panel" data-step="2">
         <p class="muted" style="margin-bottom:8px">What kind of project are you starting?</p>
         <div class="radiolist">
-          <label><input type="radio" name="projectType" value="new" required /><span><span class="ttl">I need a new website</span><span class="sub">Built from scratch around your business and brand.</span></span></label>
-          <label><input type="radio" name="projectType" value="redesign" /><span><span class="ttl">I need my current website redesigned</span><span class="sub">Modern, mobile-first, conversion-focused refresh.</span></span></label>
-          <label><input type="radio" name="projectType" value="maintenance" /><span><span class="ttl">I need website maintenance</span><span class="sub">Updates, fixes, security, and ongoing support.</span></span></label>
-          <label><input type="radio" name="projectType" value="analytics" /><span><span class="ttl">I want an analytics dashboard</span><span class="sub">Add the owner dashboard to your existing site.</span></span></label>
-          <label><input type="radio" name="projectType" value="help" /><span><span class="ttl">I need help deciding</span><span class="sub">We'll review your situation and recommend the right path.</span></span></label>
+          <label><input type="radio" name="projectType" value="new" required /><span><span class="ttl">New website</span><span class="sub">Built from scratch around your business and brand.</span></span></label>
+          <label><input type="radio" name="projectType" value="redesign" /><span><span class="ttl">Redesign</span><span class="sub">Modern, mobile-first, conversion-focused refresh.</span></span></label>
+          <label><input type="radio" name="projectType" value="maintenance" /><span><span class="ttl">Maintenance only</span><span class="sub">Updates, fixes, security, and ongoing support.</span></span></label>
+          <label><input type="radio" name="projectType" value="analytics" /><span><span class="ttl">Analytics dashboard only</span><span class="sub">Add the owner dashboard to your existing site.</span></span></label>
+          <label><input type="radio" name="projectType" value="help" /><span><span class="ttl">Not sure — help me decide</span><span class="sub">We'll review your situation and recommend the right path.</span></span></label>
         </div>
+        <div class="field"><label for="mainJob">In one sentence — what's the website's main job?</label><input id="mainJob" name="mainJob" type="text" required placeholder="Get more booking enquiries from local customers." /></div>
+        <div class="field"><label for="whyNow">Why now? What's prompting this project?</label><textarea id="whyNow" name="whyNow" required placeholder="Current site is outdated, losing leads to competitors, planning a rebrand, etc."></textarea></div>
       </div>
 
-      <!-- STEP 3 -->
+      <!-- STEP 3 — Your business -->
       <div class="step-panel" data-step="3">
-        <p class="muted" style="margin-bottom:8px">What are your website goals? Select any that apply.</p>
+        <div class="field"><label for="idealCustomer">Who is your ideal customer? <span class="dim">(1–2 sentences)</span></label><textarea id="idealCustomer" name="idealCustomer" required placeholder="Homeowners aged 35–60 in the West of Ireland looking for reliable, certified tradespeople."></textarea></div>
+        <div class="field"><label for="customerVolume">Roughly how many customers / enquiries per month?</label>
+          <select id="customerVolume" name="customerVolume">
+            <option value="">Select…</option>
+            <option>Under 10</option>
+            <option>10–50</option>
+            <option>50–200</option>
+            <option>200+</option>
+            <option>Just starting out</option>
+          </select>
+        </div>
+        <div class="field"><label for="approver">Who else needs to approve design decisions?</label>
+          <select id="approver" name="approver">
+            <option value="">Select…</option>
+            <option>Just me</option>
+            <option>My business partner</option>
+            <option>A small team</option>
+            <option>A board / committee</option>
+          </select>
+        </div>
+        <p class="muted" style="margin-top:14px;margin-bottom:8px">What are the website's goals? Select any that apply.</p>
         <div class="checkpills" id="goals">
           <label><input type="checkbox" name="goals" value="leads" /><span>Get more leads</span></label>
           <label><input type="checkbox" name="goals" value="professional" /><span>Look more professional</span></label>
@@ -1539,7 +1562,7 @@ body{animation:page-in .6s ease-out both}
         </div>
       </div>
 
-      <!-- STEP 4 -->
+      <!-- STEP 4 — Features & scope -->
       <div class="step-panel" data-step="4">
         <p class="muted" style="margin-bottom:8px">Which features do you need?</p>
         <div class="checkpills" id="features">
@@ -1550,17 +1573,39 @@ body{animation:page-in .6s ease-out both}
           <label><input type="checkbox" name="features" value="portfolio" /><span>Portfolio / gallery</span></label>
           <label><input type="checkbox" name="features" value="testimonials" /><span>Testimonials</span></label>
           <label><input type="checkbox" name="features" value="blog" /><span>Blog / news</span></label>
-          <label><input type="checkbox" name="features" value="dashboard" /><span>Analytics dashboard</span></label>
+          <label><input type="checkbox" name="features" value="ecommerce" /><span>E-commerce</span></label>
           <label><input type="checkbox" name="features" value="portal" /><span>Client portal</span></label>
           <label><input type="checkbox" name="features" value="payments" /><span>Payment integration</span></label>
           <label><input type="checkbox" name="features" value="chat" /><span>Live chat</span></label>
           <label><input type="checkbox" name="features" value="email" /><span>Email signup</span></label>
+          <label><input type="checkbox" name="features" value="multilang" /><span>Multi-language</span></label>
+        </div>
+        <div class="row-2" style="margin-top:14px">
+          <div class="field"><label for="pageCount">Roughly how many pages?</label>
+            <select id="pageCount" name="pageCount">
+              <option value="">Select…</option>
+              <option>1–3 (simple landing)</option>
+              <option>4–7 (small business)</option>
+              <option>8–12 (full website)</option>
+              <option>12+ (large/complex)</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+          <div class="field"><label for="dashboardInterest">Want the owner analytics dashboard?</label>
+            <select id="dashboardInterest" name="dashboardInterest">
+              <option value="">Select…</option>
+              <option>Yes — I want it</option>
+              <option>No thanks</option>
+              <option>Tell me more</option>
+            </select>
+          </div>
         </div>
       </div>
 
-      <!-- STEP 5 -->
+      <!-- STEP 5 — Look, feel, content -->
       <div class="step-panel" data-step="5">
-        <div class="field"><label>Preferred style</label>
+        <div class="field"><label for="threeWords">Three words that describe how the site should feel</label><input id="threeWords" name="threeWords" type="text" placeholder="e.g. premium, calm, trustworthy" /></div>
+        <div class="field"><label>Preferred style <span class="dim">(pick any that apply)</span></label>
           <div class="checkpills" id="style">
             <label><input type="checkbox" name="style" value="modern" /><span>Modern</span></label>
             <label><input type="checkbox" name="style" value="premium" /><span>Premium</span></label>
@@ -1572,45 +1617,85 @@ body{animation:page-in .6s ease-out both}
         </div>
         <div class="row-2">
           <div class="field"><label for="brandColors">Brand colors <span class="dim">(if known)</span></label><input id="brandColors" name="brandColors" type="text" placeholder="e.g. navy &amp; gold" /></div>
-          <div class="field"><label for="logo">Upload logo</label><input id="logo" name="logo" type="file" accept="image/*" /></div>
+          <div class="field"><label for="logo">Upload logo <span class="dim">(if you have one)</span></label><input id="logo" name="logo" type="file" accept="image/*" /></div>
         </div>
-        <div class="field"><label for="likeSites">Example websites you like</label><input id="likeSites" name="likeSites" type="text" placeholder="URLs, comma-separated" /></div>
-        <div class="field"><label for="dislikeSites">Example websites you dislike</label><input id="dislikeSites" name="dislikeSites" type="text" placeholder="URLs, comma-separated" /></div>
-      </div>
-
-      <!-- STEP 6 -->
-      <div class="step-panel" data-step="6">
         <div class="row-2">
-          <div class="field"><label for="launchDate">Desired launch date</label><input id="launchDate" name="launchDate" type="date" /></div>
-          <div class="field"><label for="budget">Budget range</label>
-            <select id="budget" name="budget">
+          <div class="field"><label for="likeSites">A website you LIKE the look of</label><input id="likeSites" name="likeSites" type="text" placeholder="https://" /></div>
+          <div class="field"><label for="dislikeSites">A website you DON'T like</label><input id="dislikeSites" name="dislikeSites" type="text" placeholder="https://" /></div>
+        </div>
+        <div class="row-2">
+          <div class="field"><label for="copyStatus">Do you have website copy already?</label>
+            <select id="copyStatus" name="copyStatus">
               <option value="">Select…</option>
-              <option>Under €1,500</option>
-              <option>€1,500 – €3,000</option>
-              <option>€3,000 – €6,000</option>
-              <option>€6,000 – €12,000</option>
-              <option>€12,000+</option>
+              <option>Yes — written and ready</option>
+              <option>Partially — some written</option>
+              <option>No — I need help with this</option>
+            </select>
+          </div>
+          <div class="field"><label for="photoStatus">Do you have professional photography?</label>
+            <select id="photoStatus" name="photoStatus">
+              <option value="">Select…</option>
+              <option>Yes — I have photos</option>
+              <option>I'll use stock photography</option>
+              <option>No — I need help with this</option>
             </select>
           </div>
         </div>
-        <div class="field"><label for="urgency">How urgent is the project?</label>
-          <select id="urgency" name="urgency">
+      </div>
+
+      <!-- STEP 6 — Logistics & money -->
+      <div class="step-panel" data-step="6">
+        <div class="row-2">
+          <div class="field"><label for="domainStatus">Who owns your domain?</label>
+            <select id="domainStatus" name="domainStatus">
+              <option value="">Select…</option>
+              <option>I own it</option>
+              <option>It's at GoDaddy / Namecheap / Blacknight / other</option>
+              <option>I don't have a domain yet</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+          <div class="field"><label for="launchDate">Desired launch date</label><input id="launchDate" name="launchDate" type="date" /></div>
+        </div>
+        <div class="row-2">
+          <div class="field"><label for="budget">Which package fits your budget?</label>
+            <select id="budget" name="budget">
+              <option value="">Select…</option>
+              <option>Starter Build — €900</option>
+              <option>Professional Build — €1,200</option>
+              <option>Managed Plan only — €145/mo</option>
+              <option>Custom / not sure — recommend a fit</option>
+            </select>
+          </div>
+          <div class="field"><label for="managedInterest">Interested in the Managed Plan after launch?</label>
+            <select id="managedInterest" name="managedInterest">
+              <option value="">Select…</option>
+              <option>Yes — sign me up</option>
+              <option>Maybe — tell me more</option>
+              <option>No, just the build</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="referral">How did you hear about Site Pilot?</label>
+          <select id="referral" name="referral">
             <option value="">Select…</option>
-            <option>ASAP — within a month</option>
-            <option>1–2 months</option>
-            <option>2–3 months</option>
-            <option>Flexible</option>
+            <option>Google search</option>
+            <option>Instagram</option>
+            <option>Referral / word of mouth</option>
+            <option>LinkedIn</option>
+            <option>Facebook</option>
+            <option>Other</option>
           </select>
         </div>
-        <div class="field"><label for="notes">Anything else we should know?</label><textarea id="notes" name="notes" placeholder="Goals, must-haves, integrations, content status …"></textarea></div>
+        <div class="field"><label for="notes">Anything else we should know?</label><textarea id="notes" name="notes" placeholder="Must-haves, integrations, deadlines, brand notes …"></textarea></div>
       </div>
 
       <!-- SUCCESS -->
       <div class="step-panel" data-step="7">
         <div class="success">
           <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></div>
-          <h3>Thanks — your project details have been received.</h3>
-          <p>We'll review your information and contact you within one business day with the next steps and a proposed scope.</p>
+          <h3>Application received.</h3>
+          <p>We review every application personally. You'll hear from us within one business day with feedback and a proposed scope. Keep an eye on your inbox — and check spam, just in case.</p>
           <div style="margin-top:24px"><a href="#top" class="btn btn-ghost">Back to top</a></div>
         </div>
       </div>
@@ -1631,7 +1716,7 @@ body{animation:page-in .6s ease-out both}
     <div class="section-head reveal">
       <span class="eyebrow"><span class="live-dot"></span>Free 15-min consultation</span>
       <h2>Talk it through <span class="gradient-text">first</span></h2>
-      <p>Not ready to fill out the onboarding form? Pick a 15-minute slot below. No pitch, no pressure — just a quick chat about your business and whether we're a fit.</p>
+      <p>Not ready to fill out the application form? Pick a 15-minute slot below. No pitch, no pressure — just a quick chat about your business and whether we're a fit.</p>
     </div>
 
     <div class="calendly-wrap reveal">
@@ -1650,7 +1735,7 @@ body{animation:page-in .6s ease-out both}
         <div class="calendly-fallback" id="calendlyFallback">
           <h3>Schedule a call</h3>
           <p>Once you've signed up at calendly.com and replaced <code style="color:var(--brand-2);background:rgba(244,228,186,.08);padding:2px 6px;border-radius:4px">YOUR_CALENDLY_URL</code> with your real Calendly link, this section will load your live booking calendar.</p>
-          <a href="#onboarding" class="btn btn-primary">Or start the onboarding form
+          <a href="#onboarding" class="btn btn-primary">Or start the application form
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -1698,7 +1783,7 @@ body{animation:page-in .6s ease-out both}
       <details><summary>Can you build a website from scratch?</summary><div class="a">Absolutely. We design custom websites for new businesses, startups, and owners who want a professional online presence from day one — including hosting, domains, and launch support.</div></details>
       <details><summary>Do you offer monthly maintenance?</summary><div class="a">Yes. Our Managed plan covers updates, fixes, security checks, performance monitoring, and a monthly owner report — handled by us so you don't have to think about it.</div></details>
       <details><summary>What is included in the analytics dashboard?</summary><div class="a">Traffic, leads, top pages, conversion rate, device and location insights, page speed, uptime, maintenance status, and a plain-English monthly summary with recommended improvements.</div></details>
-      <details><summary>How long does a website project take?</summary><div class="a">Typical timelines: Starter Build 1–2 weeks, Professional Build 3–5 weeks. We'll confirm a clear timeline after reviewing your onboarding form.</div></details>
+      <details><summary>How long does a website project take?</summary><div class="a">Typical timelines: Starter Build 1–2 weeks, Professional Build 3–5 weeks. We'll confirm a clear timeline after reviewing your application form.</div></details>
       <details><summary>Do I need to know anything technical?</summary><div class="a">Not at all. We handle hosting, domains, SSL, code, and analytics setup. You get a clean dashboard and clear monthly reports — no jargon required.</div></details>
       <details><summary>Can you help with content and layout?</summary><div class="a">Yes. We write conversion-focused copy, design every page, and can source or commission imagery. You'll review and approve everything before launch.</div></details>
     </div>
@@ -1711,7 +1796,7 @@ body{animation:page-in .6s ease-out both}
     <div class="section-head reveal">
       <span class="eyebrow">Contact</span>
       <h2>Have a quick <span class="gradient-text">question</span>?</h2>
-      <p>Send us a message — or skip ahead and start your project with our onboarding form.</p>
+      <p>Send us a message — or skip ahead and start your project with our application form.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info reveal">
@@ -1719,10 +1804,10 @@ body{animation:page-in .6s ease-out both}
         <div class="ci"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="lbl">Based in</div><div class="v">Ireland · Working remotely worldwide</div></div></div>
         <div class="ci" style="background:linear-gradient(135deg,rgba(212,175,55,.10),rgba(244,228,186,.04));border-color:rgba(212,175,55,.25)">
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V6l-8-3-8 3v6c0 6 8 10 8 10z"/></svg></span>
-          <div><div class="lbl">Ready to start?</div><div class="v"><a href="#onboarding" style="color:var(--brand-2)">Begin onboarding →</a></div></div>
+          <div><div class="lbl">Ready to start?</div><div class="v"><a href="#onboarding" style="color:var(--brand-2)">Begin application →</a></div></div>
         </div>
       </div>
-      <!-- CONTACT FORM: same Formspree ID as onboarding form (or create a separate one) -->
+      <!-- CONTACT FORM: same Formspree ID as application form (or create a separate one) -->
       <form class="form-wrap reveal" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="margin:0;padding:24px">
         <div class="row-2">
           <div class="field"><label for="cName">Your name</label><input id="cName" name="name" type="text" required placeholder="Jane Doe" /></div>
@@ -1769,7 +1854,7 @@ body{animation:page-in .6s ease-out both}
       <p style="margin-bottom:14px">Site Pilot ("we", "our") respects your privacy and is committed to protecting any personal data you share with us. This page explains what we collect, why, and how we use it.</p>
 
       <h3 style="font-size:1.05rem;color:#fff;margin:22px 0 8px">What we collect</h3>
-      <p style="margin-bottom:14px">When you fill in our onboarding form or contact form, we collect: your name, business name, email address, phone number (optional), business location, industry, project details, and any messages or files you choose to send. We do not use third-party advertising or behavioral tracking.</p>
+      <p style="margin-bottom:14px">When you fill in our application form or contact form, we collect: your name, business name, email address, phone number (optional), business location, industry, project details, and any messages or files you choose to send. We do not use third-party advertising or behavioral tracking.</p>
 
       <h3 style="font-size:1.05rem;color:#fff;margin:22px 0 8px">Why we collect it</h3>
       <p style="margin-bottom:14px">We use this information solely to respond to your enquiry, prepare a project proposal, and (with your consent) keep you informed about your project. Form submissions are processed through Formspree and delivered to our project inbox.</p>
@@ -1796,7 +1881,7 @@ body{animation:page-in .6s ease-out both}
 
 <!-- ============== STICKY MOBILE CTA (mobile only) ============== -->
 <div class="mobile-cta" role="complementary" aria-label="Quick actions">
-  <div class="label"><strong>Ready to start?</strong>30s onboarding form</div>
+  <div class="label"><strong>Apply to work with us</strong>Quick 6-step application</div>
   <a href="#onboarding" class="btn btn-primary">Start
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
   </a>
@@ -1832,7 +1917,7 @@ body{animation:page-in .6s ease-out both}
       </div>
       <div>
         <h4>Get started</h4>
-        <a href="#onboarding">Begin onboarding</a>
+        <a href="#onboarding">Apply to work with us</a>
         <a href="#contact">Contact us</a>
         <a href="mailto:info@sitepilotstudio.ie">info@sitepilotstudio.ie</a>
       </div>
@@ -1944,7 +2029,7 @@ document.querySelectorAll('.svc-card, .plan').forEach(card=>{
   const next = document.getElementById('nextBtn');
   const actions = document.getElementById('formActions');
   const totalSteps = 6;
-  const labels = ['Business details','Project type','Website goals','Features needed','Design preferences','Timeline & budget'];
+  const labels = ['About you','Project basics','Your business','Features & scope','Look, feel, content','Logistics & money'];
   let i = 1;
 
   function show(n){
@@ -1960,7 +2045,7 @@ document.querySelectorAll('.svc-card, .plan').forEach(card=>{
       stepLabel.textContent = `Step ${n} of ${totalSteps} — ${labels[n-1]}`;
       stepCount.textContent = `${Math.round((n/totalSteps)*100)}%`;
       back.disabled = (n === 1);
-      next.textContent = (n === totalSteps) ? 'Submit my website project' : 'Continue';
+      next.textContent = (n === totalSteps) ? 'Submit my application' : 'Continue';
       // re-add the icon if continuing
       if(n !== totalSteps){
         next.innerHTML = 'Continue <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>';

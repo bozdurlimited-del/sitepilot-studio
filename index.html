@@ -2083,7 +2083,8 @@ document.querySelectorAll('.svc-card, .plan').forEach(card=>{
       });
       if(res.ok){
         i = 7; show(i);
-        window.scrollTo({top:form.offsetTop-80,behavior:'smooth'});
+        // On success, scroll the form into view so user sees the confirmation
+        form.scrollIntoView({behavior:'smooth', block:'start'});
       } else {
         next.disabled = false;
         next.textContent = 'Submit failed — try again';
@@ -2096,11 +2097,11 @@ document.querySelectorAll('.svc-card, .plan').forEach(card=>{
 
   next.addEventListener('click',()=>{
     if(!validateStep(i)) return;
-    if(i < totalSteps){ i++; show(i); window.scrollTo({top:form.offsetTop-80,behavior:'smooth'}); }
+    if(i < totalSteps){ i++; show(i); }
     else { submitForm(); }
   });
   back.addEventListener('click',()=>{
-    if(i > 1){ i--; show(i); window.scrollTo({top:form.offsetTop-80,behavior:'smooth'}); }
+    if(i > 1){ i--; show(i); }
   });
 
   form.addEventListener('submit',e=>e.preventDefault());

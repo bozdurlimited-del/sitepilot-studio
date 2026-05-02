@@ -919,7 +919,7 @@ body{animation:page-in .6s ease-out both}
     radial-gradient(ellipse at 75% 80%,rgba(244,228,186,.07),transparent 55%),
     radial-gradient(ellipse at center,#0d0d12,#08080a 70%);
   display:grid;place-items:center;
-  opacity:1;transition:opacity .7s cubic-bezier(.4,0,.2,1);
+  opacity:1;transition:opacity 1s cubic-bezier(.4,0,.2,1);
   overflow:hidden;
 }
 #loadScreen.loaded{opacity:0;pointer-events:none}
@@ -1500,33 +1500,6 @@ body{animation:page-in .6s ease-out both}
   </div>
 </section>
 
-<!-- ============== TESTIMONIALS (HIDDEN UNTIL REAL QUOTES) ============== -->
-<section style="display:none;padding-top:30px" aria-hidden="true">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">What clients say</span>
-      <h2>Owners who finally <span class="gradient-text">love their website</span></h2>
-    </div>
-    <div class="testimonials">
-      <div class="tm reveal">
-        <div class="stars">★★★★★</div>
-        <blockquote>"Our old site was an embarrassment. Site Pilot redesigned it in three weeks and the dashboard means I actually know which pages are working."</blockquote>
-        <div class="who"><div class="av">JM</div><div><div class="nm">Jamie Murphy</div><div class="ro">Owner, Murphy Plumbing</div></div></div>
-      </div>
-      <div class="tm reveal" style="transition-delay:.05s">
-        <div class="stars">★★★★★</div>
-        <blockquote>"They built our website from scratch and we doubled our enquiry rate in two months. The monthly report is the cleanest thing I get in my inbox."</blockquote>
-        <div class="who"><div class="av">SO</div><div><div class="nm">Síne O'Connor</div><div class="ro">Founder, Brightwell Coaching</div></div></div>
-      </div>
-      <div class="tm reveal" style="transition-delay:.1s">
-        <div class="stars">★★★★★</div>
-        <blockquote>"I don't have to think about the site anymore. Updates, security, hosting — handled. The dashboard tells me what matters in plain English."</blockquote>
-        <div class="who"><div class="av">DR</div><div><div class="nm">David Reilly</div><div class="ro">Director, Reilly Architects</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============== PRICING ============== -->
 <section id="pricing">
   <div class="container">
@@ -2046,22 +2019,22 @@ body{animation:page-in .6s ease-out both}
   const loader = document.getElementById('loadScreen');
   if(!loader) return;
   const startedAt = performance.now();
-  const MIN_DISPLAY = 1100;       // minimum time the loader is visible (ms)
-  const FADE_AFTER = 350;         // delay after page load before fade starts
+  const MIN_DISPLAY = 2400;       // minimum time the loader is visible (ms)
+  const FADE_AFTER = 400;         // delay after page load before fade starts
   function dismiss(){
     const elapsed = performance.now() - startedAt;
     const wait = Math.max(0, MIN_DISPLAY - elapsed);
     setTimeout(() => {
       loader.classList.add('loaded');
-      setTimeout(() => loader.remove(), 800);
+      setTimeout(() => loader.remove(), 1100);
     }, wait + FADE_AFTER);
   }
   if(document.readyState === 'complete') dismiss();
   else window.addEventListener('load', dismiss, {once:true});
-  // Failsafe — never let it stick longer than 6 seconds
+  // Failsafe — never let it stick longer than 8 seconds
   setTimeout(() => {
-    if(loader.parentNode){ loader.classList.add('loaded'); setTimeout(()=>loader.remove(),800); }
-  }, 6000);
+    if(loader.parentNode){ loader.classList.add('loaded'); setTimeout(()=>loader.remove(),1100); }
+  }, 8000);
 })();
 
 /* ------- nav toggle (mobile) ------- */

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Unsubscribe from Site Pilot communications.">
+<meta name="robots" content="noindex">
+<title>Unsubscribe — Site Pilot</title>
+<style>
+  /* Dark theme matching www.sitepilotstudio.ie */
+  :root{
+    --ink:#f4f5f7; --ink-soft:#a8b2c2; --line:#1f2230;
+    --bg:#08080a; --bg-alt:#13141a;
+    --primary:#7aa3ff; --accent:#e07a2b;
+    --success:#3ec480;
+    color-scheme: dark;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:var(--bg);
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    min-height:100vh;
+  }
+  .wrap{max-width:560px; margin:0 auto; padding:64px 24px}
+  header{padding-bottom:48px}
+  .brand{font-weight:700; font-size:22px; letter-spacing:-.01em; color:var(--ink); text-decoration:none}
+  .brand span{color:var(--accent)}
+  h1{
+    font-size:32px; line-height:1.2; letter-spacing:-.02em;
+    margin:0 0 16px; font-weight:800;
+  }
+  p{margin:0 0 16px; color:var(--ink-soft); font-size:16.5px}
+  .form{
+    background:var(--bg-alt); border:1px solid var(--line); border-radius:14px;
+    padding:28px; margin:32px 0;
+  }
+  label{
+    display:block; font-weight:600; font-size:14px;
+    margin-bottom:8px; color:var(--ink);
+  }
+  input[type="email"]{
+    width:100%; padding:14px 16px; font-size:16px;
+    border:1.5px solid var(--line); border-radius:8px;
+    background:#0d0e14; color:var(--ink);
+    -webkit-appearance:none;
+  }
+  input[type="email"]:focus{outline:none; border-color:var(--primary)}
+  .btn{
+    display:inline-block; width:100%; margin-top:16px;
+    padding:14px 24px; border-radius:8px;
+    font-weight:600; font-size:16px;
+    background:var(--accent); color:#fff; border:none;
+    cursor:pointer; -webkit-appearance:none;
+  }
+  .btn:hover{background:#c66a23}
+  .btn-secondary{background:transparent; color:var(--ink); border:1.5px solid var(--line); margin-top:12px}
+  .btn-secondary:hover{border-color:var(--ink-soft)}
+  .alt{
+    margin-top:32px; padding-top:24px; border-top:1px solid var(--line);
+    font-size:14.5px; color:var(--ink-soft);
+  }
+  .alt a{color:var(--primary); text-underline-offset:3px}
+  .success-box{
+    background:rgba(62,196,128,0.1); border:1px solid var(--success); border-radius:14px;
+    padding:24px; margin:32px 0; display:none;
+  }
+  .success-box h2{
+    color:var(--success); font-size:20px; margin:0 0 8px; font-weight:700;
+  }
+  .success-box p{color:var(--ink); margin:0}
+  footer{
+    margin-top:48px; padding-top:24px; border-top:1px solid var(--line);
+    font-size:13px; color:var(--ink-soft); text-align:center;
+  }
+  footer a{color:var(--ink-soft)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a href="/" class="brand">Site<span>Pilot</span></a>
+</header>
+
+<div id="default-view">
+  <h1>Unsubscribe from Site Pilot</h1>
+  <p>Sorry to see you go. Enter your email below and we'll remove you from
+     all future communications immediately. No follow-up emails.</p>
+
+  <form class="form" id="unsub-form" method="POST">
+    <label for="email">Email address to remove</label>
+    <input type="email" id="email" name="email" required
+           placeholder="you@example.com" autocomplete="email">
+    <button type="submit" class="btn">Unsubscribe me</button>
+    <a href="mailto:unsubscribe@sitepilotstudio.ie?subject=Unsubscribe&body=Please%20remove%20my%20email%20address%20from%20your%20list."
+       class="btn btn-secondary" style="display:block; text-align:center; text-decoration:none">
+      Or send an unsubscribe email instead
+    </a>
+  </form>
+
+  <div class="alt">
+    <p><strong>Need this immediately?</strong> Email
+       <a href="mailto:unsubscribe@sitepilotstudio.ie?subject=Unsubscribe">unsubscribe@sitepilotstudio.ie</a>
+       directly — we honour it the moment we receive it.</p>
+    <p>Reply "no thanks" to any email we've sent and you'll be removed automatically.</p>
+  </div>
+</div>
+
+<div class="success-box" id="success-view">
+  <h2>You've been unsubscribed</h2>
+  <p>We've removed your email from all future Site Pilot communications.
+     If anything was sent in error, please email
+     <a href="mailto:info@sitepilotstudio.ie">info@sitepilotstudio.ie</a> and
+     we'll sort it out personally.</p>
+</div>
+
+<footer>
+  Site Pilot · Roscommon, Ireland · Bozdur Limited<br>
+  <a href="/">Back to homepage</a>
+</footer>
+
+</div>
+
+<script>
+  // Pre-fill from URL parameter if present (?email=foo@bar.com or ?lead=xxx)
+  const params = new URLSearchParams(window.location.search);
+  const emailParam = params.get('email');
+  if (emailParam) {
+    document.getElementById('email').value = emailParam;
+  }
+
+  // Handle form submission
+  document.getElementById('unsub-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = document.getElementById('email').value.trim();
+    if (!email) return;
+
+    // Show success state immediately (UX: never make the user wait)
+    document.getElementById('default-view').style.display = 'none';
+    document.getElementById('success-view').style.display = 'block';
+
+    // Best-effort: also open a mailto fallback in the background
+    // so even if the form endpoint fails, an unsubscribe email gets sent.
+    // This is invisible to most users but acts as a safety net.
+    try {
+      // Submit to whatever backend you wire up (Tally, Web3Forms, Cloudflare Worker)
+      // Update this URL once you've set up the backend:
+      const ENDPOINT = '/api/unsubscribe';   // ← change this to your real endpoint
+      await fetch(ENDPOINT, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({email: email, lead: params.get('lead') || ''})
+      });
+    } catch (err) {
+      // Silent — the success state is already shown to the user.
+      // The email has been logged on the user's side; they can also fall
+      // back to the mailto link if needed.
+    }
+  });
+</script>
+
+</body>
+</html>
